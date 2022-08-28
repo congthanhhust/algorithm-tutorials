@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.recursive;
 
 public class Pow {
     static long count1 = 0;
@@ -45,7 +45,7 @@ public class Pow {
 
     public static void main(String[] args) {
         int n = 100000;
-        int b = 5000;
+        int b = 500;
         long start = System.currentTimeMillis();
         for (int i = 0; i < n; i++){
             pow1(3, b);

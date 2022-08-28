@@ -1,8 +1,11 @@
-package algorithm;
+package algorithm.stack;
 
 public class StackSimple {
     static class Stack{
-        private int values[] = new int[10000];
+        public final static int MAX = 10000;
+
+        private int values[] = new int[MAX];
+
         private int index = -1;
 
         public boolean isEmpty(){

@@ -1,9 +1,10 @@
-package algorithm;
+package algorithm.stack;
 
 public class StackImplementation {
 
     static class Stack{
-        private int values[] = new int[10000];
+        public final static int MAX = 10000;
+        private int values[] = new int[MAX];
 
         /*
             Index is top element position. When stack is empty, index = -1
@@ -15,13 +16,13 @@ public class StackImplementation {
         }
 
         public void push(int newElement){
-            index = index + 1;
+            index++;
             values[index] = newElement;
         }
 
         public int pop(){
             int output = values[index];
-            index = index - 1;
+            index--;
             return output;
         }
 

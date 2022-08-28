@@ -1,9 +1,11 @@
-package algorithm;
+package algorithm.queue;
 
 public class QueueImplementation {
 
     static class Queue{
-        private int values[] = new int[10000];
+        final static int MAX = 1000;
+
+        private int values[] = new int[MAX];
 
         /**
          * Rear is last element of queue
@@ -13,13 +15,13 @@ public class QueueImplementation {
         int front = 0, rear = -1;
 
         public void enQueue(int newElement){
-            rear = rear + 1;
+            rear++;
             values[rear] = newElement;
         }
 
         public int deQueue(){
             int output = values[front];
-            front = front + 1;
+            front++;
             return output;
         }
 
